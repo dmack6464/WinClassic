@@ -1,10 +1,11 @@
-//META{"name":"WinClassic","description":"WinCLassic - Support server: https://discord.gg/4GJvzEp or the Website link | THIS THEME IS NOT ON THE OFFICIAL REPO & NEVER WILL BE, GO TO THE GITHUB PAGE FOR UPDATES: https://github.com/dmack6464/RealDark","author":"D Mack","version":"0.1","website":"https://discord.gg/4GJvzEp/","source":"https://github.com/dmack6464/"}*//{}
+//META{"name":"WinClassic","description":"WinCLassic - Support server: https://discord.gg/4GJvzEp or the Website link | THIS THEME IS NOT ON THE OFFICIAL REPO & NEVER WILL BE, GO TO THE GITHUB PAGE FOR UPDATES: https://github.com/dmack6464/RealDark","author":"D Mack","version":"0.2","website":"https://discord.gg/4GJvzEp/","source":"https://github.com/dmack6464/"}*//{}
 
 @import url('https://fonts.googleapis.com/css?family=Tahoma&display=swap');
 
 
 * {
 	border-radius: 0px!important;
+	text-transform: none!important;
 }
 
 .theme-light {
@@ -21,7 +22,7 @@
     --background-primary: #fff;
     --background-secondary: #d4d0c8;
     --background-tertiary: #fff;
-    --background-accent: #747f8d;
+    --background-accent: #0a246a;
     --background-floating: #d4d0c8;
     --background-modifier-hover: #0a246a;
     --background-modifier-active: #0a246a;
@@ -35,7 +36,7 @@
     --activity-card-background: #fff;
     --deprecated-panel-background: #ebedef;
     --deprecated-card-bg: #f8f9f9;
-    --deprecated-card-editable-bg: rgba(246,246,247,0.6);
+    --deprecated-card-editable-bg: #d4d0c8;
     --deprecated-store-bg: #f8f9f9;
     --deprecated-quickswitcher-input-background: #fff;
     --deprecated-quickswitcher-input-placeholder: rgba(79,84,92,0.3);
@@ -44,6 +45,56 @@
     --deprecated-text-input-border-hover: #b9bbbe;
     --deprecated-text-input-border-disabled: #dcddde;
     --deprecated-text-input-prefix: #b9bbbe;
+}
+
+/* temp(?) fix for the Save To plugin when you right-click images/users */
+
+.contextMenu-HLZMGh {
+    max-width: 400px;
+}
+.itemGroup-1tL0uz .item-1Yvehc:not(.da-item):hover {
+    height: 200px;
+}
+.itemGroup-1tL0uz .item-1Yvehc:not(.da-item) {
+    position: relative;
+    font-weight: 500;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 0 8px;
+    font-size: 14px;
+    color:var(--interactive-normal);
+    line-height: 18px;
+    height: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 2px;
+}
+.itemGroup-1tL0uz .itemSubMenu-1vN_Yn .contextMenu-HLZMGh .itemGroup-1tL0uz .item-1Yvehc{
+    height: 20px;
+}
+.itemGroup-1tL0uz .itemSubMenu-1vN_Yn .contextMenu-HLZMGh .itemGroup-1tL0uz .item-1Yvehc:hover{
+    height: 100px;
+}
+.itemGroup-1tL0uz .itemSubMenu-1vN_Yn .contextMenu-HLZMGh .itemGroup-1tL0uz .item-1Yvehc .contextMenu-HLZMGh .item-1Yvehc {
+    height: 19px;
+    min-height: unset;
+}
+.itemGroup-1tL0uz .itemSubMenu-1vN_Yn .contextMenu-HLZMGh .itemGroup-1tL0uz .item-1Yvehc .contextMenu-HLZMGh {
+    overflow-y: scroll!important;
+    height: 100px;
+    padding: 0!important;
+}
+.theme-dark .contextMenu-HLZMGh:not(.da-contextMenu),
+.theme-light .contextMenu-HLZMGh:not(.da-contextMenu) {
+    left:0!important;
+    top:0px!important;
+    max-height: 200px;
 }
 
 
@@ -61,16 +112,14 @@ its up to you to fix them or wait for me to eventually fox them*/
 ::-webkit-scrollbar-corner {background-color: transparent;}
 ::-webkit-scrollbar {width: 6px !important;height: 8px !important;}
 ::-webkit-scrollbar-track:active{background-color: #2a2a2a !important;}
-*:not(:hover)::-webkit-scrollbar-thumb { background: transparent !important; border: 0px solid transparent !important; }
 ::-webkit-scrollbar-button {display: initial !important; background-color: #0f0;}
-::-webkit-scrollbar-track {background-color: transparent; border:6px;}
+::-webkit-scrollbar-track {background-color: transparent; border:6px;border-radius: 0px!important;}
 ::-webkit-scrollbar-track:hover {background-color: #111111; border:6px;}
 ::-webkit-scrollbar-track:active {background-color: #111111; border:6px !important;}
-::-webkit-scrollbar-thumb {background:  #222222 !important;}
 
 /* Changes all scroll bars */
 ::-webkit-scrollbar {
-    width: 6px !important;
+    width: 16px !important;
     height: 8px !important;
 }
 /* Border and colour of the scrollbar thumb  */
@@ -82,12 +131,13 @@ its up to you to fix them or wait for me to eventually fox them*/
 	border-right:1px solid #848484;
 	border-top:1px solid #fff;
 	border-left:1px solid #fff;
-	width: 2px;
+	width: 16px;
 }
 /* Changes the background colour of the scroll bars and servers. */
 ::-webkit-scrollbar-track-piece, .guilds-wrapper {
     background-color: #c5c4c0 !important;
     border: none !important;
+    border-radius: 0px!important;
 }
 /* This will change the colour when you hover over any scroll bar. */ 
 ::-webkit-scrollbar-thumb:hover {
@@ -104,7 +154,14 @@ its up to you to fix them or wait for me to eventually fox them*/
 }
 
 
-
+.theme-light .scrollerThemed-2oenus.themedWithTrack-q8E3vB .scroller-2FKFPG::-webkit-scrollbar-thumb {
+	background-color: #d7d2cf !important;
+    border-bottom:1px solid #848484;
+	border-right:1px solid #848484;
+	border-top:1px solid #fff;
+	border-left:1px solid #fff;
+	width: 16px;
+}
 
 
 
@@ -167,7 +224,9 @@ its up to you to fix them or wait for me to eventually fox them*/
 
 
 
-.appMount-3lHmkl, body {
+.appMount-3lHmkl,
+body,
+.header-2tA9Os {
 	background: linear-gradient(to right, #0a246a, #a6caf0);
 }
 
@@ -189,6 +248,12 @@ its up to you to fix them or wait for me to eventually fox them*/
 	min-height:21px;
 }
 
+.side-8zPYf6 .item-PXvHYJ {
+	height: 21px;
+	padding: 0;
+	margin: 0;
+}
+
 .form-2fGMdU,
 .item-1Yvehc {
 	margin: 0;
@@ -196,6 +261,49 @@ its up to you to fix them or wait for me to eventually fox them*/
 
 .barButtonBase-3UKlW2 {
 	color: #000;
+}
+
+.theme-light #bd-settings-sidebar .ui-tab-bar-header,
+.theme-light #bd-settings-sidebar .ui-tab-bar-item {
+	color: #000;
+}
+
+.side-8zPYf6 .separator-gCa7yv {
+	padding: 0;
+	margin: 0;
+}
+
+.wrapper-CU3qI5:hover {
+	background: #0a246a;
+}
+
+.wrapper-25eVIn svg foreignObject,
+.wrapper-3t9DeA mask,
+.wrapper-3t9DeA foreignObject {
+	mask: none;
+}
+
+.header-2tA9Os {
+	overflow: hidden;
+	height: 17px;
+	padding: 0px 4px!important;
+	margin: 0;
+}
+
+.flexChild-faoVW3 h4 {
+	margin-top: -2px;
+	font-size: 12px;
+	color: #fff;
+}
+
+.theme-light .bda-slist li,
+.theme-light .bda-slist .bda-description,
+.theme-light .bda-slist .bda-header {
+	background-color: var(--background-secondary);
+	color: #000;
+	margin: 0;
+	border-bottom:1px solid #848484;
+	border-top:1px solid #fff;
 }
 
 .winButton-iRh8-Z {
@@ -209,6 +317,42 @@ its up to you to fix them or wait for me to eventually fox them*/
 	margin-right: 2px;
 }
 
+.theme-light input {
+	background: #fff;
+	background-color: #fff;
+}
+
+.typing-2GQL18 {
+	height: 14px;
+    top: -16px;
+    padding: 0 4px;
+}
+.channelTextArea-rNsIhG {
+	padding-top: 12px;
+	margin-bottom: 13px;
+}
+.textArea-2Spzkt {
+	min-height: 14px;
+	padding: 0;
+}
+
+.buttons-205you,
+.theme-light .attachButton-1UjEWA {
+	height: auto;
+	min-height: 25px;
+}
+.button-2vd_v_,
+.theme-light .attachButton-1UjEWA {
+	padding: 0;
+}
+.theme-light .attachButton-1UjEWA:hover {
+	background: #0a246a;
+}
+
+
+
+
+
 .modeSelected-1zApJ_ .name-3_Dsmg,
 .wrapper-1ucjTd:hover .name-3_Dsmg,
 .side-8zPYf6 .themed-OHr7kt.item-PXvHYJ:hover,
@@ -216,7 +360,9 @@ its up to you to fix them or wait for me to eventually fox them*/
 .side-8zPYf6 .themed-OHr7kt.selected-3s45Ha.item-PXvHYJ,
 .topPill-30KHOu .themed-OHr7kt.selected-3s45Ha.item-PXvHYJ,
 .header-2o-2hj:hover .name-3YKhmS,
-.clickable-1JJAn8:hover .activity-E-0FeD {
+.clickable-1JJAn8:hover .activity-E-0FeD,
+.selected-37j_iU .actionIcon-2Hi9ZG,
+.containerDefault-1ZnADq:hover .actionIcon-2Hi9ZG {
 	color: #fff;
 	text-shadow: none;
 }
@@ -240,16 +386,22 @@ its up to you to fix them or wait for me to eventually fox them*/
 }
 
 .inner-zqa7da,
-.search-36MZv- {
+.search-36MZv-,
+.theme-light input {
 	border-bottom:1px solid #fff;
 	border-right:1px solid #fff;
 	border-top:1px solid #404040;
 	border-left:1px solid #404040;
 }
 
-.app-2rEoOp button,
-.iconWrapper-2OrFZ1 {
+.theme-light .app-2rEoOp button,
+.iconWrapper-2OrFZ1,
+.cardPrimary-1Hv-to,
+.cardPrimaryEditable-3KtE4g,
+.typing-2GQL18 {
+	color: #000;
 	background: #d4d0c8;
+	background-color: #d4d0c8;
 	border-bottom:1px solid #848484;
 	border-right:1px solid #848484;
 	border-top:1px solid #fff;
@@ -276,4 +428,9 @@ its up to you to fix them or wait for me to eventually fox them*/
 .itemGroup-1tL0uz:not(:first-child):not(:empty) {
 	border-bottom:1px solid #848484;
 	border-top:1px solid #fff;
+}
+
+.side-8zPYf6 .separator-gCa7yv {
+	border-bottom:1px solid #fff;
+	border-top:1px solid #848484;
 }
