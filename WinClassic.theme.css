@@ -1,4 +1,4 @@
-//META{"name":"WinClassic","description":"WinCLassic - Support server: https://discord.gg/4GJvzEp or the Website link | THIS THEME IS NOT ON THE OFFICIAL REPO & NEVER WILL BE, GO TO THE GITHUB PAGE FOR UPDATES: https://github.com/dmack6464/RealDark","author":"D Mack","version":"0.2","website":"https://discord.gg/4GJvzEp/","source":"https://github.com/dmack6464/"}*//{}
+//META{"name":"WinClassic","description":"WinCLassic - Support server: https://discord.gg/4GJvzEp or the Website link | THIS THEME IS NOT ON THE OFFICIAL REPO & NEVER WILL BE, GO TO THE GITHUB PAGE FOR UPDATES: https://github.com/dmack6464/WinClassic","author":"D Mack","version":"0.2","website":"https://discord.gg/4GJvzEp/","source":"https://github.com/dmack6464/WinClassic"}*//{}
 
 @import url('https://fonts.googleapis.com/css?family=Tahoma&display=swap');
 
@@ -112,7 +112,7 @@ its up to you to fix them or wait for me to eventually fox them*/
 ::-webkit-scrollbar-corner {background-color: transparent;}
 ::-webkit-scrollbar {width: 6px !important;height: 8px !important;}
 ::-webkit-scrollbar-track:active{background-color: #2a2a2a !important;}
-::-webkit-scrollbar-button {display: initial !important; background-color: #0f0;}
+::-webkit-scrollbar-button {display: initial !important; background-color: #c5c4c0;}
 ::-webkit-scrollbar-track {background-color: transparent; border:6px;border-radius: 0px!important;}
 ::-webkit-scrollbar-track:hover {background-color: #111111; border:6px;}
 ::-webkit-scrollbar-track:active {background-color: #111111; border:6px !important;}
@@ -433,4 +433,8 @@ body,
 .side-8zPYf6 .separator-gCa7yv {
 	border-bottom:1px solid #fff;
 	border-top:1px solid #848484;
+}
+.children-19S4PO:after {
+    border-right: #c4c0b8 1px solid;
+    background: none;
 }
