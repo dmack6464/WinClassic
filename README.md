@@ -3,7 +3,7 @@
 ## [Support Server][dmackserv]<br>
 A BetterDiscord theme that imitates the appearance of the Windows Classic theme.<br>
 <br>
-This theme requires the Discord light theme to be enabled in User Settings > Appearance<br>
+This theme requires the Discord dark theme to be enabled in User Settings > Appearance (while in the Developer Preview phase)<br>
 <br>
 Some elements may be broken due to not being able to maintain or further develop this theme temporarily.<br>
 <br>
